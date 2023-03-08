@@ -62,7 +62,7 @@ class Fib:
 
     def __repr__(self):
         if self.n is None:
-            return f'Fib()'
+            return f'Fib({})'
         return f'Fib({self.n})'
 
     def __iter__(self):
@@ -114,6 +114,6 @@ def fib_yield(n=None):
 
     a, b = 1, 1
     if n is not None:
-        for i in range(1, n+1):
+        for i in range(1, n + 1):
             yield a
-            a, b = b,  a + b
+            a, b = b, a + b
