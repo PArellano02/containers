@@ -63,8 +63,6 @@ class BinaryTree():
             yield from self.iterate(node.left)
             yield node.value
             yield from self.iterate(node.right)
-        else:
-            raise StopIteration
 
     def print_tree(self, traversal_type):
         if traversal_type == 'preorder':
