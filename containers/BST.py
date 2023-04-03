@@ -35,9 +35,6 @@ class BST(BinaryTree):
         '''
         return type(self).__name__ + '(' + str(self.to_list('inorder')) + ')'
 
-    def __iter__(self):
-        for value in super().__iter__():
-            yield value
 
     def is_bst_satisfied(self):
         '''
