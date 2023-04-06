@@ -147,7 +147,7 @@ class Heap(BinaryTree):
             self.num_nodes -= 1
             self.root.value = last_val
             # print("self.root22=", self.root)
-            self._Reagan(self.root)
+            self._reagan(self.root)
 
     @staticmethod
     def _remove(node, binary_str2):
@@ -170,16 +170,16 @@ class Heap(BinaryTree):
                 return last_val
 
     @staticmethod
-    def _Reagan(node):
+    def _reagan(node):
         if node:
             if node.right and node.left:
                 if node.value > node.right.value < node.left.value:
                     node.value, node.right.value = node.right.value, node.value
-                    Heap._Reagan(node.right)
+                    Heap._reagan(node.right)
                 if node.value > node.left.value < node.right.value:
                     node.value, node.left.value = node.left.value, node.value
-                    Heap._Reagan(node.left)
+                    Heap._reagan(node.left)
             if node.left:
                 if node.value > node.left.value:
                     node.value, node.left.value = node.left.value, node.value
-                    Heap._Reagan(node.left)
+                    Heap._reagan(node.left)
